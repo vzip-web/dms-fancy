@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Products – DMS Fancy Shop | Premium Beauty Sri Lanka</title>
+    <meta name="description"
+        content="Browse all premium beauty products at DMS Fancy Shop – soaps, creams, supplements, hair care. Free islandwide delivery Sri Lanka. Order via WhatsApp 071 215 0911." />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;1,400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="loader-logo"><span class="logo-d">D</span><span class="logo-m">M</span><span
+                    class="logo-s">S</span></div>
+            <div class="loader-tagline">Premium Beauty Collection</div>
+            <div class="loader-bar-wrap">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+        <div class="loader-particles" id="loaderParticles"></div>
+    </div>
+
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="DMS Fancy Shop Logo" class="logo-img"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="logo-icon" style="display:none"><span>D</span><span>M</span><span>S</span></div>
+                <div class="logo-text">
+                    <span class="logo-brand">DMS Fancy</span>
+                    <span class="logo-sub">Premium Beauty</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link active">Products</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="admin.html" class="nav-link admin-link"><i class="fas fa-crown"></i> Admin</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://wa.me/94712150911" target="_blank" class="btn-whatsapp-nav"><i
+                        class="fab fa-whatsapp"></i> Order Now</a>
+                <button class="nav-hamburger" id="navHamburger"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="products.html" class="mobile-nav-link active">Products</a>
+            <a href="about.html" class="mobile-nav-link">About Us</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <a href="admin.html" class="mobile-nav-link">Admin Panel</a>
+            <a href="https://wa.me/94712150911" target="_blank" class="mobile-nav-link mobile-order"><i
+                    class="fab fa-whatsapp"></i> Order via WhatsApp</a>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="orb orb-1" style="opacity:0.5"></div>
+        <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Products</span></div>
+        <h1>Our <span class="gradient-text">Products</span></h1>
+        <p>Premium beauty collection – all with free islandwide delivery across Sri Lanka</p>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="section" style="background:var(--green-dark)">
+        <div class="container">
+
+            <!-- Search -->
+            <div style="margin-bottom:2rem;position:relative">
+                <input type="text" id="productSearch" placeholder="🔍  Search products, ingredients, categories..."
+                    style="width:100%;padding:1rem 1.5rem;border-radius:50px;background:rgba(255,255,255,0.05);
+        border:1px solid var(--border-gold);color:var(--off-white);font-size:0.95rem;
+        outline:none;font-family:var(--font-sans);transition:all 0.3s" />
+            </div>
+
+            <!-- Filter Pills -->
+            <div class="filter-pills">
+                <button class="filter-pill active" data-cat="all">All Products</button>
+                <button class="filter-pill" data-cat="soaps">Beauty Soaps</button>
+                <button class="filter-pill" data-cat="creams">Creams & Serums</button>
+                <button class="filter-pill" data-cat="haircare">Hair Care</button>
+                <button class="filter-pill" data-cat="supplements">Supplements</button>
+                <button class="filter-pill" data-cat="skincare">Skin Care</button>
+            </div>
+
+            <div class="products-grid" id="allProductsGrid">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ORDER BANNER -->
+    <section class="order-banner">
+        <div class="order-banner-bg"></div>
+        <div class="container order-banner-content">
+            <div class="order-banner-text">
+                <h2>How to <span class="gradient-text">Order?</span></h2>
+                <p>It's simple – just contact us via WhatsApp, call, or SMS below!</p>
+            </div>
+            <div class="order-methods">
+                <a href="https://wa.me/94712150911?text=Hello%20DMS%20Fancy%20Shop%2C%20I%20would%20like%20to%20place%20an%20order."
+                    target="_blank" class="order-method-btn whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <div><span class="method-label">Chat & Order</span><span class="method-val">WhatsApp</span></div>
+                </a>
+                <a href="tel:+94712150911" class="order-method-btn call">
+                    <i class="fas fa-phone"></i>
+                    <div><span class="method-label">Call Us</span><span class="method-val">071 215 0911</span></div>
+                </a>
+                <a href="sms:+94712150911?body=Hello, I want to order" class="order-method-btn sms">
+                    <i class="fas fa-sms"></i>
+                    <div><span class="method-label">Text Us</span><span class="method-val">Send SMS</span></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-bottom" style="padding:2rem;text-align:center;border-top:1px solid var(--border-gold)">
+            <p style="color:var(--text-muted)">© 2026 DMS Fancy Shop – Premium Beauty Collection | <a href="index.html"
+                    style="color:var(--gold)">Home</a></p>
+            <div style="display:flex;justify-content:center;gap:1rem;margin-top:1rem">
+                <a href="https://wa.me/94712150911" target="_blank" class="social-icon whatsapp"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/dmsfancyshop" target="_blank" class="social-icon facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/dmsfancyshop" target="_blank" class="social-icon instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@dmsfancyshop" target="_blank" class="social-icon tiktok"><i
+                        class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fab-group">
+        <a href="https://wa.me/94712150911" target="_blank" class="fab fab-wa" title="WhatsApp"><i
+                class="fab fa-whatsapp"></i><span class="fab-tooltip">Order on WhatsApp</span></a>
+        <a href="tel:+94712150911" class="fab fab-call" title="Call"><i class="fas fa-phone"></i><span
+                class="fab-tooltip">Call Us</span></a>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

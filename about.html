@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us – DMS Fancy Shop | Premium Beauty Sri Lanka</title>
+    <meta name="description"
+        content="Learn about DMS Fancy Shop – Sri Lanka's premium beauty destination in Negombo. Our mission, story, and commitment to authentic luxury beauty products." />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;1,400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="loader-logo"><span class="logo-d">D</span><span class="logo-m">M</span><span
+                    class="logo-s">S</span></div>
+            <div class="loader-tagline">Premium Beauty Collection</div>
+            <div class="loader-bar-wrap">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+        <div class="loader-particles" id="loaderParticles"></div>
+    </div>
+
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="DMS Fancy Shop Logo" class="logo-img"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="logo-icon" style="display:none"><span>D</span><span>M</span><span>S</span></div>
+                <div class="logo-text">
+                    <span class="logo-brand">DMS Fancy</span>
+                    <span class="logo-sub">Premium Beauty</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li><a href="about.html" class="nav-link active">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="admin.html" class="nav-link admin-link"><i class="fas fa-crown"></i> Admin</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://wa.me/94712150911" target="_blank" class="btn-whatsapp-nav"><i
+                        class="fab fa-whatsapp"></i> Order Now</a>
+                <button class="nav-hamburger" id="navHamburger"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="products.html" class="mobile-nav-link">Products</a>
+            <a href="about.html" class="mobile-nav-link active">About Us</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <a href="admin.html" class="mobile-nav-link">Admin Panel</a>
+            <a href="https://wa.me/94712150911" target="_blank" class="mobile-nav-link mobile-order"><i
+                    class="fab fa-whatsapp"></i> Order via WhatsApp</a>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="orb orb-1" style="opacity:0.4"></div>
+        <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>About Us</span></div>
+        <h1>About <span class="gradient-text">DMS Fancy Shop</span></h1>
+        <p>Sri Lanka's premier destination for luxury beauty – trusted, authentic, premium.</p>
+    </section>
+
+    <!-- STORY SECTION -->
+    <section class="section" style="background:var(--green-deep)">
+        <div class="container">
+            <div class="about-story-grid">
+                <div class="about-img-wrap">
+                    <img src="about_bg.png" alt="DMS Fancy Shop Premium Beauty" />
+                </div>
+                <div class="about-text">
+                    <p class="section-sub">Our Story</p>
+                    <h2>Born from a <span class="gradient-text">Passion</span> for Beauty</h2>
+                    <p>DMS Fancy Shop was founded with a single vision: to bring the world's most premium beauty
+                        products directly to the doorsteps of Sri Lankans — at fair prices with outstanding service.</p>
+                    <p>Located in the heart of Negombo at 71 S.W.R Road, 4th Kurana, we have served hundreds of
+                        satisfied customers across the island. From Colombo to Kandy, Galle to Jaffna — we deliver
+                        beauty, radiance, and confidence islandwide.</p>
+                    <p>Our collection is carefully curated: only authentic, tested, and high-performance products make
+                        it to our shelf. We believe every Sri Lankan deserves access to luxury skincare, glutathione
+                        formulas, and premium haircare.</p>
+                    <div style="display:flex;gap:2rem;margin-top:2rem;flex-wrap:wrap">
+                        <div style="text-align:center">
+                            <div
+                                style="font-family:var(--font-serif);font-size:2.5rem;font-weight:800;color:var(--gold)">
+                                500+</div>
+                            <div style="font-size:0.85rem;color:var(--text-muted)">Happy Customers</div>
+                        </div>
+                        <div style="text-align:center">
+                            <div
+                                style="font-family:var(--font-serif);font-size:2.5rem;font-weight:800;color:var(--gold)">
+                                20+</div>
+                            <div style="font-size:0.85rem;color:var(--text-muted)">Premium Products</div>
+                        </div>
+                        <div style="text-align:center">
+                            <div
+                                style="font-family:var(--font-serif);font-size:2.5rem;font-weight:800;color:var(--gold)">
+                                100%</div>
+                            <div style="font-size:0.85rem;color:var(--text-muted)">Authentic</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="section" style="background:var(--green-dark)">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-sub">What We Stand For</p>
+                <h2 class="section-title">Our <span class="gradient-text">Values</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-gem"></i></div>
+                    <h3>Authenticity</h3>
+                    <p>We stock only 100% genuine products sourced from verified brand distributors. No fakes, no
+                        compromises.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Customer First</h3>
+                    <p>Every decision we make puts our customers first. We listen, advise, and deliver with care and
+                        warmth.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Quality Curation</h3>
+                    <p>Our range is carefully curated — only products that work and deliver real results make the cut.
+                    </p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-truck"></i></div>
+                    <h3>Free Island Delivery</h3>
+                    <p>We believe premium beauty should be accessible. Free delivery islandwide — no hidden charges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL MEDIA SECTION -->
+    <section class="section" style="background:var(--green-deep)">
+        <div class="container" style="text-align:center">
+            <div class="section-header">
+                <p class="section-sub">Stay Connected</p>
+                <h2 class="section-title">Follow Us on <span class="gradient-text">Social Media</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            <p style="color:var(--text-muted);margin-bottom:3rem;font-size:1.05rem">Join our beauty community for the
+                latest products, tips, deals, and exclusive offers!</p>
+            <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap">
+                <a href="https://www.facebook.com/dmsfancyshop" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:0.8rem;padding:2rem 2.5rem;
+        background:rgba(24,119,242,0.1);border:1px solid rgba(24,119,242,0.4);border-radius:20px;
+        color:#a8c8ff;text-decoration:none;transition:all 0.3s;min-width:130px"
+                    onmouseenter="this.style.transform='translateY(-8px)';this.style.boxShadow='0 20px 40px rgba(24,119,242,0.2)'"
+                    onmouseleave="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+                    <i class="fab fa-facebook-f" style="font-size:2.5rem;color:#1877f2"></i>
+                    <span style="font-weight:600;font-size:0.9rem">Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/dmsfancyshop" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:0.8rem;padding:2rem 2.5rem;
+        background:rgba(220,39,67,0.1);border:1px solid rgba(220,39,67,0.4);border-radius:20px;
+        color:#ffb0c0;text-decoration:none;transition:all 0.3s;min-width:130px"
+                    onmouseenter="this.style.transform='translateY(-8px)'"
+                    onmouseleave="this.style.transform='translateY(0)'">
+                    <i class="fab fa-instagram" style="font-size:2.5rem;color:#e1306c"></i>
+                    <span style="font-weight:600;font-size:0.9rem">Instagram</span>
+                </a>
+                <a href="https://www.tiktok.com/@dmsfancyshop" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:0.8rem;padding:2rem 2.5rem;
+        background:rgba(105,201,208,0.1);border:1px solid rgba(105,201,208,0.4);border-radius:20px;
+        color:#69c9d0;text-decoration:none;transition:all 0.3s;min-width:130px"
+                    onmouseenter="this.style.transform='translateY(-8px)'"
+                    onmouseleave="this.style.transform='translateY(0)'">
+                    <i class="fab fa-tiktok" style="font-size:2.5rem;color:#69c9d0"></i>
+                    <span style="font-weight:600;font-size:0.9rem">TikTok</span>
+                </a>
+                <a href="https://www.youtube.com/@dmsfancyshop" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:0.8rem;padding:2rem 2.5rem;
+        background:rgba(255,0,0,0.1);border:1px solid rgba(255,0,0,0.3);border-radius:20px;
+        color:#ff8080;text-decoration:none;transition:all 0.3s;min-width:130px"
+                    onmouseenter="this.style.transform='translateY(-8px)'"
+                    onmouseleave="this.style.transform='translateY(0)'">
+                    <i class="fab fa-youtube" style="font-size:2.5rem;color:#ff0000"></i>
+                    <span style="font-weight:600;font-size:0.9rem">YouTube</span>
+                </a>
+                <a href="https://wa.me/94712150911" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:0.8rem;padding:2rem 2.5rem;
+        background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.4);border-radius:20px;
+        color:#5de680;text-decoration:none;transition:all 0.3s;min-width:130px"
+                    onmouseenter="this.style.transform='translateY(-8px)'"
+                    onmouseleave="this.style.transform='translateY(0)'">
+                    <i class="fab fa-whatsapp" style="font-size:2.5rem;color:#25d366"></i>
+                    <span style="font-weight:600;font-size:0.9rem">WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-bottom" style="padding:2rem;text-align:center;border-top:1px solid var(--border-gold)">
+            <p style="color:var(--text-muted)">© 2026 DMS Fancy Shop | 71 S.W.R Road, 4th Kurana, Negombo | <a
+                    href="tel:+94712150911" style="color:var(--gold)">071 215 0911</a></p>
+        </div>
+    </footer>
+
+    <div class="fab-group">
+        <a href="https://wa.me/94712150911" target="_blank" class="fab fab-wa"><i class="fab fa-whatsapp"></i><span
+                class="fab-tooltip">Order on WhatsApp</span></a>
+        <a href="tel:+94712150911" class="fab fab-call"><i class="fas fa-phone"></i><span class="fab-tooltip">Call
+                Us</span></a>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

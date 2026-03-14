@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel – DMS Fancy Shop</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;1,400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .admin-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .admin-tab {
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid var(--border-gold);
+            color: var(--text-muted);
+            cursor: pointer;
+            background: transparent;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .admin-tab.active {
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+            color: var(--green-deep);
+            font-weight: 700;
+            border-color: transparent;
+        }
+
+        .admin-panel {
+            display: none;
+        }
+
+        .admin-panel.active {
+            display: block;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-gold);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-card .stat-num {
+            font-size: 2rem;
+            color: var(--gold);
+            font-family: var(--font-serif);
+            font-weight: 800;
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="loader-logo"><span class="logo-d">D</span><span class="logo-m">M</span><span
+                    class="logo-s">S</span></div>
+            <div class="loader-tagline">Admin Panel</div>
+            <div class="loader-bar-wrap">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+        <div class="loader-particles" id="loaderParticles"></div>
+    </div>
+
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="DMS Fancy Shop Logo" class="logo-img"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="logo-icon" style="display:none"><span>D</span><span>M</span><span>S</span></div>
+                <div class="logo-text">
+                    <span class="logo-brand">DMS Fancy</span>
+                    <span class="logo-sub">Admin Panel</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="admin.html" class="nav-link admin-link active"><i class="fas fa-crown"></i> Admin</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="index.html" class="btn-whatsapp-nav" style="background:var(--green-accent);box-shadow:none">
+                    <i class="fas fa-arrow-left"></i> Back to Site
+                </a>
+                <button class="nav-hamburger" id="navHamburger"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="products.html" class="mobile-nav-link">Products</a>
+            <a href="admin.html" class="mobile-nav-link active">Admin Panel</a>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" style="padding:8rem 2rem 3rem">
+        <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Admin Panel</span></div>
+        <h1><i class="fas fa-crown" style="color:var(--gold);font-size:0.7em"></i> <span
+                class="gradient-text">Admin</span> Panel</h1>
+        <p>Manage your products, view stats, and control your store.</p>
+    </section>
+
+    <!-- ADMIN CONTENT -->
+    <section class="section" style="background:var(--green-dark);padding-top:2rem">
+        <div class="container">
+
+            <!-- Stats -->
+            <div class="stats-row" id="adminStats"></div>
+
+            <!-- Tabs -->
+            <div class="admin-tabs">
+                <button class="admin-tab active" onclick="switchTab('add')"><i class="fas fa-plus"></i> Add
+                    Product</button>
+                <button class="admin-tab" onclick="switchTab('list')"><i class="fas fa-list"></i> Manage
+                    Products</button>
+                <button class="admin-tab" onclick="switchTab('settings')"><i class="fas fa-cog"></i> Settings</button>
+            </div>
+
+            <!-- ADD PRODUCT TAB -->
+            <div class="admin-panel active" id="tab-add">
+                <div class="admin-form-wrap">
+                    <h3 style="font-family:var(--font-serif);font-size:1.6rem;font-weight:800;margin-bottom:0.5rem">
+                        Add <span class="gradient-text">New Product</span>
+                    </h3>
+                    <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:2rem">New products appear
+                        instantly on all pages.</p>
+
+                    <div id="successMsg" class="success-message">
+                        <i class="fas fa-check-circle"></i> Product added successfully! Visible on all pages now.
+                    </div>
+
+                    <form id="addProductForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="productName">Product Name *</label>
+                                <input type="text" id="productName" placeholder="e.g. Glupa Glutathione Soap"
+                                    required />
+                            </div>
+                            <div class="form-group">
+                                <label for="productCategory">Category *</label>
+                                <select id="productCategory" required>
+                                    <option value="">-- Select --</option>
+                                    <option value="soaps">Beauty Soaps</option>
+                                    <option value="creams">Creams & Serums</option>
+                                    <option value="haircare">Hair Care</option>
+                                    <option value="supplements">Supplements</option>
+                                    <option value="skincare">Skin Care</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="productPrice">Price (LKR) *</label>
+                                <input type="number" id="productPrice" placeholder="e.g. 2600" min="1" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="productBadge">Badge Label</label>
+                                <input type="text" id="productBadge" placeholder="e.g. Best Seller, New Arrival" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productFeatures">Key Features (comma separated)</label>
+                            <input type="text" id="productFeatures"
+                                placeholder="e.g. Glutathione Formula, Brightening, Smooth Skin" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productDesc">Description</label>
+                            <textarea id="productDesc" placeholder="Short product description..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Product Image</label>
+                            <div class="image-upload-preview" id="imgPreview"
+                                onclick="document.getElementById('productImage').click()">
+                                <div class="image-upload-placeholder">
+                                    <i class="fas fa-cloud-upload-alt"
+                                        style="font-size:2.5rem;color:var(--border-gold);display:block;margin-bottom:0.5rem"></i>
+                                    <span>Click to upload product image</span><br>
+                                    <span style="font-size:0.75rem;color:var(--text-muted)">JPG, PNG, WEBP
+                                        supported</span>
+                                </div>
+                            </div>
+                            <input type="file" id="productImage" accept="image/*" style="display:none" />
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-plus"></i> Add Product to Store
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- MANAGE PRODUCTS TAB -->
+            <div class="admin-panel" id="tab-list">
+                <div
+                    style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem">
+                    <h3 style="font-family:var(--font-serif);font-size:1.6rem;font-weight:800">
+                        Manage <span class="gradient-text">Products</span>
+                    </h3>
+                    <button onclick="resetProducts()" style="background:rgba(220,50,50,0.1);border:1px solid rgba(220,50,50,0.3);
+          color:#ff7070;padding:0.6rem 1.2rem;border-radius:10px;cursor:pointer;font-family:var(--font-sans)">
+                        <i class="fas fa-undo"></i> Reset to Defaults
+                    </button>
+                </div>
+                <div class="admin-products-list" id="adminProductList"></div>
+            </div>
+
+            <!-- SETTINGS TAB -->
+            <div class="admin-panel" id="tab-settings">
+                <div class="admin-form-wrap">
+                    <h3 style="font-family:var(--font-serif);font-size:1.6rem;font-weight:800;margin-bottom:2rem">
+                        Store <span class="gradient-text">Settings</span>
+                    </h3>
+                    <div class="form-group">
+                        <label>WhatsApp Number</label>
+                        <input type="text" value="071 215 0911" readonly style="opacity:0.6" />
+                        <small style="color:var(--text-muted);font-size:0.75rem">Contact developer to change
+                            this.</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Store Address</label>
+                        <input type="text" value="71 S.W.R Road, 4th Kurana, Negombo" readonly style="opacity:0.6" />
+                    </div>
+                    <div class="form-group">
+                        <label>Delivery</label>
+                        <input type="text" value="FREE Islandwide – Sri Lanka" readonly style="opacity:0.6" />
+                    </div>
+                    <div
+                        style="background:rgba(201,168,76,0.08);border:1px solid var(--border-gold);border-radius:12px;padding:1.2rem;margin-top:1rem">
+                        <p style="color:var(--gold-light);font-weight:600;margin-bottom:0.5rem"><i
+                                class="fas fa-info-circle"></i> Quick Links</p>
+                        <div style="display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:0.8rem">
+                            <a href="index.html" class="btn-outline" style="font-size:0.85rem;padding:0.5rem 1rem">🏠
+                                Home</a>
+                            <a href="products.html" class="btn-outline"
+                                style="font-size:0.85rem;padding:0.5rem 1rem">🛍️ Products</a>
+                            <a href="https://wa.me/94712150911" target="_blank" class="btn-whatsapp"
+                                style="font-size:0.85rem;padding:0.5rem 1rem">💬 WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-bottom" style="padding:2rem;text-align:center;border-top:1px solid var(--border-gold)">
+            <p style="color:var(--text-muted)">DMS Fancy Shop – Admin Panel | <a href="index.html"
+                    style="color:var(--gold)">Back to Site</a></p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        function switchTab(name) {
+            document.querySelectorAll('.admin-panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+            document.getElementById('tab-' + name).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function resetProducts() {
+            if (confirm('Reset to default products? This will remove all custom products.')) {
+                localStorage.removeItem('dms_products');
+                location.reload();
+            }
+        }
+
+        // Stats
+        function renderStats() {
+            const products = JSON.parse(localStorage.getItem('dms_products') || '[]');
+            const totalValue = products.reduce((s, p) => s + p.price, 0);
+            const statsEl = document.getElementById('adminStats');
+            if (!statsEl) return;
+            statsEl.innerHTML = `
+    <div class="stat-card"><div class="stat-num">${products.length}</div><div class="stat-label">Total Products</div></div>
+    <div class="stat-card"><div class="stat-num">${products.filter(p => p.category === 'soaps').length}</div><div class="stat-label">Beauty Soaps</div></div>
+    <div class="stat-card"><div class="stat-num">${products.filter(p => p.category === 'creams').length}</div><div class="stat-label">Creams</div></div>
+    <div class="stat-card"><div class="stat-num">${products.filter(p => p.category === 'supplements').length}</div><div class="stat-label">Supplements</div></div>
+    <div class="stat-card"><div class="stat-num">${products.filter(p => p.category === 'haircare').length}</div><div class="stat-label">Hair Care</div></div>
+    <div class="stat-card"><div class="stat-num" style="font-size:1.2rem">LKR ${Math.round(totalValue / 1000)}K</div><div class="stat-label">Catalog Value</div></div>
+  `;
+        }
+        document.addEventListener('DOMContentLoaded', renderStats);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DMS Fancy Shop – Premium Beauty Collection | Sri Lanka</title>
+    <meta name="description"
+        content="DMS Fancy Shop offers premium beauty products including skin whitening soaps, glutathione creams, collagen supplements, and luxury hair care. Free islandwide delivery in Sri Lanka. Call/WhatsApp: 071 215 0911." />
+    <meta name="keywords"
+        content="DMS Fancy Shop, premium beauty, skin whitening, glutathione soap, Negombo, Sri Lanka, beauty products" />
+    <meta property="og:title" content="DMS Fancy Shop – Premium Beauty Collection" />
+    <meta property="og:description"
+        content="Premium beauty products with free islandwide delivery. Order via WhatsApp or call 071 215 0911." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ===== LOADING SCREEN ===== -->
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="logo-d">D</span><span class="logo-m">M</span><span class="logo-s">S</span>
+            </div>
+            <div class="loader-tagline">Premium Beauty Collection</div>
+            <div class="loader-bar-wrap">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+        <div class="loader-particles" id="loaderParticles"></div>
+    </div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="DMS Fancy Shop Logo" class="logo-img"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="logo-icon" style="display:none">
+                    <span>D</span><span>M</span><span>S</span>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-brand">DMS Fancy</span>
+                    <span class="logo-sub">Premium Beauty</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="admin.html" class="nav-link admin-link"><i class="fas fa-crown"></i> Admin</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://wa.me/94712150911" target="_blank" class="btn-whatsapp-nav">
+                    <i class="fab fa-whatsapp"></i> Order Now
+                </a>
+                <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-nav-link active">Home</a>
+            <a href="products.html" class="mobile-nav-link">Products</a>
+            <a href="about.html" class="mobile-nav-link">About Us</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <a href="admin.html" class="mobile-nav-link">Admin Panel</a>
+            <a href="https://wa.me/94712150911" target="_blank" class="mobile-nav-link mobile-order">
+                <i class="fab fa-whatsapp"></i> Order via WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="hero" class="hero-section">
+        <div class="hero-canvas-wrap">
+            <canvas id="heroCanvas"></canvas>
+        </div>
+        <div class="hero-bg" style="background-image: url('hero_bg.png')"></div>
+        <div class="hero-overlay"></div>
+
+        <!-- 3D Floating orbs -->
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Sri Lanka's Premium Beauty Destination</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Reveal Your</span>
+                <span class="title-line gradient-text">Natural Beauty</span>
+                <span class="title-line">With Luxury Care</span>
+            </h1>
+            <p class="hero-desc">
+                Premium skincare, glutathione formulas & luxury beauty products.<br />
+                Free islandwide delivery across Sri Lanka.
+            </p>
+            <div class="hero-ctas">
+                <a href="products.html" class="btn-primary">
+                    <span>Explore Products</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="https://wa.me/94712150911?text=Hello%20DMS%20Fancy%20Shop%2C%20I%20would%20like%20to%20order%20a%20product."
+                    target="_blank" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Order on WhatsApp</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num">500+</span>
+                    <span class="stat-label">Happy Customers</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">20+</span>
+                    <span class="stat-label">Premium Products</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">Free</span>
+                    <span class="stat-label">Island Delivery</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll-indicator">
+            <div class="scroll-icon">
+                <div class="scroll-dot"></div>
+            </div>
+            <span>Scroll to Discover</span>
+        </div>
+    </section>
+
+    <!-- ===== MARQUEE STRIP ===== -->
+    <div class="marquee-strip">
+        <div class="marquee-track">
+            <span>✦ Free Islandwide Delivery</span>
+            <span>✦ Premium Beauty Products</span>
+            <span>✦ Glutathione Formulas</span>
+            <span>✦ 100% Authentic</span>
+            <span>✦ WhatsApp Orders</span>
+            <span>✦ Call: 071 215 0911</span>
+            <span>✦ Negombo, Sri Lanka</span>
+            <span>✦ Free Islandwide Delivery</span>
+            <span>✦ Premium Beauty Products</span>
+            <span>✦ Glutathione Formulas</span>
+            <span>✦ 100% Authentic</span>
+            <span>✦ WhatsApp Orders</span>
+            <span>✦ Call: 071 215 0911</span>
+            <span>✦ Negombo, Sri Lanka</span>
+        </div>
+    </div>
+
+    <!-- ===== FEATURED PRODUCTS ===== -->
+    <section id="featured" class="section products-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-sub">Our Best Sellers</p>
+                <h2 class="section-title">Featured <span class="gradient-text">Products</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products injected by JS from localStorage -->
+            </div>
+            <div class="see-all-wrap">
+                <a href="products.html" class="btn-outline">
+                    <span>View All Products</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section id="why" class="section why-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-sub">Why DMS Fancy Shop</p>
+                <h2 class="section-title">The <span class="gradient-text">Premium</span> Difference</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="why-grid">
+                <div class="why-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="why-icon"><i class="fas fa-award"></i></div>
+                    <h3>100% Authentic</h3>
+                    <p>All our products are genuine, sourced directly from verified manufacturers and brand
+                        distributors.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="why-icon"><i class="fas fa-truck"></i></div>
+                    <h3>Free Island Delivery</h3>
+                    <p>We deliver FREE islandwide across Sri Lanka. Order today and receive your beauty essentials fast.
+                    </p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="why-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h3>Easy WhatsApp Order</h3>
+                    <p>Simply message us on WhatsApp or call us. We make ordering quick, easy, and personal.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="why-icon"><i class="fas fa-star"></i></div>
+                    <h3>Premium Quality</h3>
+                    <p>Curated luxury beauty brands including glutathione formulas, collagen solutions, and expert
+                        skincare.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="why-icon"><i class="fas fa-headset"></i></div>
+                    <h3>Personal Support</h3>
+                    <p>Get personalized beauty advice directly from our team. We help you find the perfect product.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Satisfaction Guaranteed</h3>
+                    <p>Your satisfaction is our priority. We stand behind every product we sell with complete
+                        confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ORDER BANNER ===== -->
+    <section class="order-banner">
+        <div class="order-banner-bg"></div>
+        <div class="container order-banner-content">
+            <div class="order-banner-text">
+                <h2>Ready to Order?</h2>
+                <p>Contact us via WhatsApp, call, or SMS — we're here to help!</p>
+            </div>
+            <div class="order-methods">
+                <a href="https://wa.me/94712150911?text=Hello%20DMS%20Fancy%20Shop%2C%20I%20would%20like%20to%20place%20an%20order."
+                    target="_blank" class="order-method-btn whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <span class="method-label">Chat & Order</span>
+                        <span class="method-val">WhatsApp</span>
+                    </div>
+                </a>
+                <a href="tel:+94712150911" class="order-method-btn call">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <span class="method-label">Call Us Now</span>
+                        <span class="method-val">071 215 0911</span>
+                    </div>
+                </a>
+                <a href="sms:+94712150911?body=Hello%20DMS%20Fancy%20Shop%2C%20I%20want%20to%20order"
+                    class="order-method-btn sms">
+                    <i class="fas fa-sms"></i>
+                    <div>
+                        <span class="method-label">Text Message</span>
+                        <span class="method-val">Send SMS</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-sub">Customer Love</p>
+                <h2 class="section-title">What Our <span class="gradient-text">Customers Say</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="testimonials-slider" id="testimonialsSlider">
+                <div class="testimonial-card active">
+                    <div class="test-stars">★★★★★</div>
+                    <p>"The Olifair Radiant Effect Cream is absolutely amazing! My skin glows beautifully. DMS Fancy
+                        Shop delivered the next day. Highly recommended!"</p>
+                    <div class="test-author">
+                        <div class="test-avatar">N</div>
+                        <div><strong>Nimesha P.</strong><span>Colombo</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="test-stars">★★★★★</div>
+                    <p>"Ordered the Glupa Glutathione Soap and I can already see results within 2 weeks! The WhatsApp
+                        ordering was so easy. Will buy again!"</p>
+                    <div class="test-author">
+                        <div class="test-avatar">S</div>
+                        <div><strong>Sachini R.</strong><span>Kandy</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="test-stars">★★★★★</div>
+                    <p>"Great service! The Gluta Collagen Pink arrived well packaged. Skin feels so much smoother. Free
+                        delivery is a big plus. Thank you DMS!"</p>
+                    <div class="test-author">
+                        <div class="test-avatar">A</div>
+                        <div><strong>Amaya K.</strong><span>Gampaha</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="test-stars">★★★★★</div>
+                    <p>"L'Oréal Elvive Shampoo for a great price! My hair has never looked better. DMS Fancy Shop is my
+                        go-to for beauty products in Sri Lanka."</p>
+                    <div class="test-author">
+                        <div class="test-avatar">D</div>
+                        <div><strong>Dilani W.</strong><span>Negombo</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots" id="testimonialDots">
+                <button class="t-dot active" onclick="goToTestimonial(0)"></button>
+                <button class="t-dot" onclick="goToTestimonial(1)"></button>
+                <button class="t-dot" onclick="goToTestimonial(2)"></button>
+                <button class="t-dot" onclick="goToTestimonial(3)"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MAP + CONTACT STRIP ===== -->
+    <section class="location-section">
+        <div class="container location-grid">
+            <div class="location-info">
+                <h2>Find <span class="gradient-text">Us</span></h2>
+                <div class="location-details">
+                    <div class="loc-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Our Address</strong>
+                            <span>71 S.W.R Road, 4th Kurana, Negombo, Sri Lanka</span>
+                        </div>
+                    </div>
+                    <div class="loc-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Phone / WhatsApp</strong>
+                            <span>071 215 0911</span>
+                        </div>
+                    </div>
+                    <div class="loc-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Open Hours</strong>
+                            <span>Mon–Sat: 8am – 9pm | Sun: 10am – 6pm</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="https://wa.me/94712150911" target="_blank" class="social-icon whatsapp" title="WhatsApp"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/dmsfancyshop" target="_blank" class="social-icon facebook"
+                        title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/dmsfancyshop" target="_blank" class="social-icon instagram"
+                        title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@dmsfancyshop" target="_blank" class="social-icon tiktok"
+                        title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@dmsfancyshop" target="_blank" class="social-icon youtube"
+                        title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="map-wrap">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.0!2d79.85!3d7.21!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNy4yMSw3OS44NQ!5e0!3m2!1sen!2slk!4v1234567890"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    title="DMS Fancy Shop Location"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon small"><span>D</span><span>M</span><span>S</span></div>
+                        <div class="logo-text">
+                            <span class="logo-brand">DMS Fancy Shop</span>
+                            <span class="logo-sub">Premium Beauty Collection</span>
+                        </div>
+                    </div>
+                    <p>Sri Lanka's premier destination for luxury beauty products. We bring premium skincare,
+                        glutathione formulas, and top beauty brands directly to your doorstep.</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/94712150911" target="_blank" title="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/dmsfancyshop" target="_blank" title="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/dmsfancyshop" target="_blank" title="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@dmsfancyshop" target="_blank" title="TikTok"><i
+                                class="fab fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/@dmsfancyshop" target="_blank" title="YouTube"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="admin.html">Admin Panel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?cat=skincare">Skin Care</a></li>
+                        <li><a href="products.html?cat=soaps">Beauty Soaps</a></li>
+                        <li><a href="products.html?cat=creams">Creams & Serums</a></li>
+                        <li><a href="products.html?cat=haircare">Hair Care</a></li>
+                        <li><a href="products.html?cat=supplements">Supplements</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Order Now</h4>
+                    <div class="footer-order-btns">
+                        <a href="https://wa.me/94712150911?text=Hello%20DMS%20Fancy%20Shop%2C%20I%20would%20like%20to%20order."
+                            target="_blank" class="footer-order-btn">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Order
+                        </a>
+                        <a href="tel:+94712150911" class="footer-order-btn call">
+                            <i class="fas fa-phone"></i> Call: 071 215 0911
+                        </a>
+                        <a href="sms:+94712150911?body=Hello, I want to place an order" class="footer-order-btn sms">
+                            <i class="fas fa-sms"></i> Send SMS
+                        </a>
+                    </div>
+                    <div class="footer-delivery-badge">
+                        <i class="fas fa-truck"></i>
+                        <span>FREE Delivery Islandwide</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 DMS Fancy Shop – Premium Beauty Collection. All rights reserved.</p>
+                <p>71 S.W.R Road, 4th Kurana, Negombo, Sri Lanka | 071 215 0911</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== FLOATING ACTION BUTTONS ===== -->
+    <div class="fab-group">
+        <a href="https://wa.me/94712150911?text=Hello%20DMS%20Fancy%20Shop%2C%20I%20would%20like%20to%20order%20a%20product."
+            target="_blank" class="fab fab-wa" title="WhatsApp Order">
+            <i class="fab fa-whatsapp"></i>
+            <span class="fab-tooltip">Order on WhatsApp</span>
+        </a>
+        <a href="tel:+94712150911" class="fab fab-call" title="Call Us">
+            <i class="fas fa-phone"></i>
+            <span class="fab-tooltip">Call Us</span>
+        </a>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
